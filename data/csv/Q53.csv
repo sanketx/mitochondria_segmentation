@@ -1,0 +1,15 @@
+tomo_name,z_min,z_max,slice_0,slice_1,slice_2,slice_3,slice_4
+20200608_Q53_iPSC_grid1_square03_tomo00013__bin4.hdf,0,110,50,57,64,71,78
+20200608_Q53_iPSC_grid1_square03_tomo00014__bin4.hdf,15,128,50,65,80,95,110
+20200608_Q53_iPSC_grid1_square03_tomo00015__bin4.hdf,10,128,44,57,70,83,96
+20200608_Q53_iPSC_grid1_square03_tomo00017__bin4.hdf,15,128,54,67,80,93,106
+20200608_Q53_iPSC_grid1_square03_tomo00019__bin4.hdf,20,128,52,65,78,91,104
+20200608_Q53_iPSC_grid1_square03_tomo00020__bin4.hdf,5,128,48,62,76,90,104
+20200608_Q53_iPSC_grid1_square03_tomo00021__bin4.hdf,40,120,60,68,76,84,92
+20200608_Q53_iPSC_grid1_square03_tomo00022__bin4.hdf,25,128,52,68,84,90,116
+20200608_Q53_iPSC_grid1_square03_tomo00023__bin4.hdf,20,128,48,60,72,84,96
+20200608_Q53_iPSC_grid1_square03_tomo00024__bin4.hdf,10,128,52,63,74,85,96
+20200608_Q53_iPSC_grid1_square03_tomo00025__bin4.hdf,15,128,46,66,86,106,126
+20200608_Q53_iPSC_grid1_square03_tomo00026__bin4.hdf,35,128,56,69,82,95,108
+20200608_Q53_iPSC_grid1_square04_tomo00011__bin4.hdf,45,128,76,86,96,106,116
+20200608_Q53_iPSC_grid1_square04_tomo00012__bin4.hdf,15,128,50,63,76,89,102

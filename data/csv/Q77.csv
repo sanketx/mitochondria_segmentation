@@ -1,0 +1,6 @@
+tomo_name,z_min,z_max,slice_0,slice_1,slice_2,slice_3,slice_4
+0522Q77_2_bin4_mitochondria_lagre_granules.hdf,15,50,21,25,29,33,37
+20201028_Q77_iPSC_MR_tomo00013_bin4_filtered_large_granules.hdf,10,115,50,60,70,80,90
+20201028_Q77_iPSC_MR_tomo00019-unsorted_bin4_filtered_large_granules_bin4.hdf,10,85,25,35,45,55,65
+20201028_Q77_iPSC_tomo00007_bin4_filtered_large_granules.hdf,20,140,60,73,86,99,112
+20201028_Q77_iPSC_tomo00008_bin4_filtered_large_granules.hdf,20,165,80,93,106,119,132

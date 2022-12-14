@@ -1,0 +1,6 @@
+tomo_name,z_min,z_max,slice_0,slice_1,slice_2,slice_3,slice_4
+20211201_BACHD_control_RNA_tomo000012_redo1_bin4_filtered.hdf,0,128,44,54,64,74,84
+20211201_BACHD_control_RNA_tomo000014_redo1_bin4_filtered.hdf,0,128,30,52,75,98,120
+20211201_BACHD_control_RNA_tomo00001_redo1_bin4_filtered.hdf,0,128,34,49,64,79,94
+20211201_BACHD_control_RNA_tomo00024_bin4_filtered_rec.hdf,25,105,44,54,64,74,84
+20211201_BACHD_control_RNA_tomo00028_bin4_filtered.hdf,25,128,67,82,97,112,127
