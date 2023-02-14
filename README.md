@@ -1,3 +1,6 @@
+<div style="width:80%">
+	![a picture of mitochondria with colored granules](media/cover_1920x1080.jpg)
+</div>
 # 3D Segmentation of Mitochondrial Structures
 
 A Deep Learning package for accurate segmentation of mitochondria and granules captured using cryo-electron tomography. This repository contains code for our papers
