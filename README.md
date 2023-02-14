@@ -39,9 +39,62 @@ If you use these scripts or data for your research, please cite as
 Our models run on NVIDIA GPUs and are quite memory intensive, so we would recommend using a GPU with a high memory capacity.
 
 ## Installation
-1. Clone the repository
-`git clone git@github.com:sanketx/sanketx.github.io.git`
+1. Clone the repository to your computer. You can also download a zip file from GitHub.
+```
+git clone git@github.com:sanketx/mitochondria_segmentation.git
+```
+2. Create a new conda environment named `mito_seg` and activate it.
+```
+cd mitochondria_segmentation
+conda env create -f environment.yml
+conda activate mito_seg
+```
+3. Install the segmentation scripts in the `src` folder
+```
+conda develop src
+```
+4. Test the installation by printing the version number
+```
+python -m mito_seg --version
+```
 
 ## Usage
-This repository is under active development - detailed instructions for usage will be uploaded soon.
+The command `python -m mito_seg --help` will show you the usage instructions.
+```
+Mitochondria Segmentation
 
+Usage:
+    mito_seg.py -i input.hdf -o output.hdf [-c] [-b] [-q]
+    mito_seg.py (-h | --help)
+    mito_seg.py --version
+
+Options:
+    -i <file>, --input <file>     Path to the input HDF file
+    -o <file>, --output <file>    Path to the output file
+    -c, --copy                    Copy the source data to the output file
+    -b, --bin                     Bin the input by a factor of 2
+    -q, --quiet                   Quiet mode - suppress warnings and info
+    -h, --help                    Show this screen.
+```
+
+The `mito_seg` program takes an input tomogram, runs it through the segmentation model, and writes the result to a specified output file. It expects inputs which are binned by 8 versions of the full resolution tomographic reconstruction. Since these are usually binned by 4, the `-b` flag can be used to tell `mito_seg` to further bin the input by a factor of 2. Additionally, the `-c` flag is used to copy the input data and store it alonside the segmentation results.
+
+Note that the input tomograms are expected to have pixel intensities which follow a standard normal distribution. `mito_seg` clips them to +/-3 standard deviations. We provide an example tomogram, `BACHD_bin4.hdf`, to test the `mito_seg` program - it can be downloaded [here](https://drive.google.com/file/d/1BmPKXe9IxordM3NWKHoOC8gc9nGmm2oq/view?usp=share_link).
+
+To run `mito_seg` on this tomogram, run the following command
+```
+python -m mito_seg --input BACHD_bin4.hdf -o result.hdf -bc
+```
+It will generate the following output and write the result to `result.hdf`
+```
+[08:51:51 PM] INFO     Input source is BACHD_bin4.hdf                                                                                           mito_seg.py:43
+              INFO     Optional parameters --bin:True, --copy:True                                                                              mito_seg.py:44
+              WARNING  Output file result.hdf exists and will be over-written                                                                   mito_seg.py:52
+              INFO     Reading tomogram of shape (256, 1024, 1024) from /MDF/images/0/image                                           segmentation_utils.py:40
+[08:51:52 PM] INFO     Tomogram binned by 2 from (256, 1024, 1024) -> (128, 512, 512)                                                 segmentation_utils.py:51
+              INFO     Model loaded from checkpoint /home/sanket/Desktop/mitochondria_segmentation/models/mito_weights.pt             segmentation_utils.py:82
+[08:51:53 PM] INFO     Predicting mitochondria probabilities in the tomogram                                                          segmentation_utils.py:95
+[08:51:54 PM] INFO     Saving mitochondria predictions to result.hdf:/mito_pred                                                      segmentation_utils.py:116
+              INFO     Copying original tomogram to result.hdf:/data                                                                 segmentation_utils.py:120
+
+```
