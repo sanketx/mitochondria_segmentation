@@ -10,7 +10,7 @@ Options:
     -o <file>, --output <file>    Path to the output file
     -c, --copy                    Copy the source data to the output file
     -b, --bin                     Bin the input by a factor of 2
-    -q, --quiet                   Quite mode - suppress warnings and info
+    -q, --quiet                   Quiet mode - suppress warnings and info
     -h, --help                    Show this screen.                    
 """
 import sys
